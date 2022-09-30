@@ -14,4 +14,5 @@ export default NextAuth({
         }),
     ],
     secret: SECRET,
+    debug:true
 });
