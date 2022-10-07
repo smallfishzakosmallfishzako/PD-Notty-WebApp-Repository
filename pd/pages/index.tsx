@@ -4,6 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar,Nav,Col,Row,Card } from "react-bootstrap";
 import Link from 'next/link';
 import {Property} from 'csstype';
+import type {NextPage} from 'next';
+import {useSession,signIn,signOut} from 'next-auth/react'
+
 
 type route_obj = {
   color:NonNullable<Property.Color>
@@ -19,7 +22,7 @@ const route_variation : route_obj[] = [
   {color:"yellow",route_name:"南部",route_startpoint:"野々市市役所",route_endpoint:"矢作西"}
 ]
 
-export default function Home() {
+const Home:NextPage = () => {
   return (
     <div>
 
@@ -31,6 +34,9 @@ export default function Home() {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#link">Link</Nav.Link>
             </Nav>
+            <p>
+              <Link href="/api/auth/signin">Googleアカウントでログイン</Link>
+            </p>
           </Navbar.Collapse>
       </Navbar>
 
@@ -78,3 +84,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
