@@ -4,8 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from 'next/link'
 import {client} from '../../libs/client'
 import  { Navbar,Nav,Row,Col,Card } from 'react-bootstrap';
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from 'react';
-import { eventNames } from 'process';
 
 const App = ({eventinfo}) => {
   return (
@@ -38,7 +36,6 @@ const App = ({eventinfo}) => {
     </div>
   )
 }
-export default App
 
 export const getStaticProps = async () => {
   const data = await client.get({endpoint:"eventinfo"});
@@ -49,3 +46,5 @@ export const getStaticProps = async () => {
     },
   };
 };
+
+export default App
