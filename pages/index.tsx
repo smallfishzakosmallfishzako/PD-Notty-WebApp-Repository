@@ -11,9 +11,6 @@ import RouteCards from './Component/RouteCards'
 import HEAD from './Component/HEAD';
 
 const Home:NextPage = () => {
-  const { data: session } = useSession();
-
-  if(session && session.user){
     return (
       <div>
         <NAVBAR/>
@@ -21,29 +18,6 @@ const Home:NextPage = () => {
         
         <div style={{padding : "15px"}}/>
           <RouteCards/>
-          <div style={{padding : "15px"}}/>
-  
-          <Row md={2} className='g-2'>
-          <Card>
-            <Card.Body>
-              <Link href="./Events">
-              <Card.Title>
-                イベント一覧
-              </Card.Title>
-              </Link>
-            </Card.Body>
-          </Card>
-        </Row>
-      </div>
-    )
-  }
-  return(
-    <div>
-        <NAVBAR/>
-        <HEAD/>
-        
-        <div style={{padding : "15px"}}/>
-        <RouteCards/>
           <div style={{padding : "15px"}}/>
   
           <Row md={2} className='g-2'>
