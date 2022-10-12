@@ -1,7 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Link from 'next/link'
 import {client} from '../../libs/client'
 import  { Navbar,Nav,Row,Col,Card } from 'react-bootstrap';
 
