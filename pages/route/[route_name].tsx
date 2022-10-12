@@ -18,24 +18,14 @@ const route_variation : route_point[] = [
 const Route = () => {
     const Router = useRouter();
     const {route_name,route_stoplist} = Router.query;
-    switch(route_name){
-      case "中央":
-        return(
+    return(
           <div>
               <HEAD/>
               <NAVBAR/>
               <h2 style={{padding : "15px"}}>{route_name}のバス停一覧</h2>
-              <div className="main-contents">
-                <div className="circle-box">
-                  {route_stoplist?.map}
-                </div>
-              </div>
           </div>
-        )
-        break;
-
-    }
-    
+    )
 }
+    
 
 export default Route
