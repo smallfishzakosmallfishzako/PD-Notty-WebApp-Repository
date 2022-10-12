@@ -19,12 +19,12 @@ type route_point = {
 const Route = () => {
     const Router = useRouter();
     const {route_name,route_stoplist} = Router.query;
+    console.log(route_stoplist)
     return (
         <div>
             <HEAD/>
             <NAVBAR/>
             <h2 style={{padding : "15px"}}>{route_name}のバス停一覧</h2>
-            
         </div>
     )
 }
