@@ -22,7 +22,7 @@ const App = ({eventinfo}) => {
         {eventinfo.map((eventinfo: { EventName: string; }) => (
         <Col>
           <Card>
-            <Card.Img variant="top" src="https://thumb.ac-illust.com/6c/6c49457122b22005a8dcacaac54d2c17_t.jpeg" />
+            <Card.Img variant="top" src="../public/eventphoto.png" />
             <Card.Body >
             <Card.Title>{eventinfo.EventName}</Card.Title>
               <Card.Text>
