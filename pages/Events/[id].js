@@ -3,16 +3,16 @@ import {client} from "../../libs/client"
 export default function EventId({eventinfo}){
     function getStringFromDate(date) {
  
-        var year_str = date.getFullYear();
+        let year_str = date.getFullYear();
         //月だけ+1すること
-        var month_str = 1 + date.getMonth();
-        var day_str = date.getDate();
-        var hour_str = date.getHours();
-        var minute_str = date.getMinutes();
-        var second_str = date.getSeconds();
+        let month_str = 1 + date.getMonth();
+        let day_str = date.getDate();
+        let hour_str = date.getHours();
+        let minute_str = date.getMinutes();
+        let second_str = date.getSeconds();
         
         
-        format_str = 'YYYY-MM-DD hh:mm:ss';
+        let format_str = 'YYYY-MM-DD hh:mm:ss';
         format_str = format_str.replace(/YYYY/g, year_str);
         format_str = format_str.replace(/MM/g, month_str);
         format_str = format_str.replace(/DD/g, day_str);
@@ -21,7 +21,7 @@ export default function EventId({eventinfo}){
         format_str = format_str.replace(/ss/g, second_str);
         
         return format_str;
-       };
+       }
 
     return (
         <>

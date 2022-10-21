@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {client} from '../../libs/client'
 import  { Navbar,Nav,Row,Col,Card } from 'react-bootstrap';
+import Link from "next/link"
 
 const App = ({eventinfo}) => {
   return (
@@ -22,9 +23,11 @@ const App = ({eventinfo}) => {
             <Card.Img variant="top" src="../public/eventphoto.png" />
             <Card.Body >
             <Card.Title>{eventinfo.EventName}</Card.Title>
+            <Link href={`/Events/${eventinfo.contentid}`}>
               <Card.Text>
                 Event 
               </Card.Text>
+            </Link>
             </Card.Body>
           </Card>
         </Col>
